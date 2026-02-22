@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Breonpop Landing Page Project
 
-## Getting Started
+## 🚦 작업 프로세스 및 규칙 (Workflow & Rules)
+**※ 본 가이드라인은 향후 이 프로젝트를 유지보수할 모든 AI 에이전트가 반드시 숙지하고 따라야 하는 절대 규칙입니다.**
 
-First, run the development server:
+### 1. 작업 시작 시 필수 숙지 사항
+- **세션 시작 시:** 이 `readme.md` 파일을 우선적으로 읽고 작업 진행의 방향을 설정합니다.
+- **선(先) 분석 보고:** 사용자의 요청 시 즉각적인 코드 수정을 지양합니다. 반드시 **[분석 리포트]**를 포맷에 맞춰 먼저 출력합니다.
+  - **포맷:** `1.현재로직/문제점` → `2.수정방향/기술` → `3.적용계획(대상파일)`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 2. 코드 수정 실행 원칙
+- **후(後) 실행 원칙:** 사용자의 명시적 명령인 **"ㄱㄱㄱ"** 가 있을 때만 파일의 수정(`write/replace`)을 진행합니다.
+- **오류 수정 가이드:** 버그 발생 시 '돌려막기(임기응변식 수정)'를 절대 금지합니다. 문제를 근본적으로 분석하고 코드를 완전히 깨끗하게 원칙적으로 작성해야 합니다. 변경 전 현재 상황과 방향성을 먼저 보고한 후 승인을 받아 이행합니다.
+- **토큰 낭비 방지:** 안 풀리거나 해결이 어려운 작업은 방향성을 잃고 무작위로 코드를 바꾸며 토큰을 낭비하지 말고, 즉시 사용자에게 현 상황을 보고하고 방향성 검토를 요청합니다.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Vercel 배포 기준
+- **오류 무관용:** Vercel 환경에서의 서버리스/Edge 배포를 염두에 두고 오류가 없도록 코드를 작성합니다. 엄격한 타입스크립트 적용과 환경변수 설정 등 프로덕션 레벨을 유지합니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. UI/UX 및 디자인 규칙
+- **디자인 수정 제안:** UI나 컬러 등 디자인 변경 시, 반드시 2가지 이상의 시안을 사용자에게 먼저 제안하고 선택을 받습니다.
+- **스켈레톤 로더 적용:** 데이터 로딩 중 빈 화면 노출을 금지합니다. 체감 속도 향상을 위해 레이아웃 뼈대(Skeleton)를 항상 먼저 노출합니다.
+- **디자인 테마:** 이 프로젝트는 **[시안 A] 비비드 팝아트 (Vivid Pop-Art)** 형식을 따릅니다. 
+  - 브랜드(브레온팝)의 아트 감성(Bouffants & Broken Hearts)에 맞춘 팝아트 컬러 적용 (강렬한 핑크, 오렌지 등)
+  - `Framer Motion`을 활용한 팝업, 패럴랙스 등 인터랙티브 애니메이션 필수 적용
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 5. 터미널 및 실행 제약
+- 패키지 설치, 복사 등 **30초 이상 소요**되는 무거운 터미널 작업은 에이전트가 직접 실행하지 않습니다. 대신 코드 블록(`bash`)으로 명령어를 사용자에게 제공하여 직접 실행하도록 유도합니다.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠 Tech Stack
+- **Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **UI Components:** Lucide-React, Tailwind-Merge, CLSX
+- **Database/Auth:** Supabase
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📖 Project Overview
+브레온팝 치약 브랜드의 강력하고 인터랙티브한 세일즈 랜딩페이지. 치약을 '욕실의 아트 오브제'로 포지셔닝하여 고객의 시선을 사로잡고 구매 퍼널 최적화를 달성합니다.

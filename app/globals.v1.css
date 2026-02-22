@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFFDF9; /* Light creamy yellow */
+  --foreground: #111111; /* Near black */
+  --color-breon-pink: #FF0055; /* Vivid Pink */
+  --color-breon-orange: #FF4D00; /* Vivid Orange */
+  --color-breon-blue: #0A0A2A; /* Deep Navy */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--color-breon-pink);
+  --color-secondary: var(--color-breon-orange);
+  --color-accent: var(--color-breon-blue);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Pop-art specific utility classes */
+@layer utilities {
+  .pop-shadow {
+    box-shadow: 6px 6px 0px 0px rgba(17, 17, 17, 1);
+    transition: all 0.2s ease-in-out;
+  }
+  .pop-shadow:hover {
+    box-shadow: 2px 2px 0px 0px rgba(17, 17, 17, 1);
+    transform: translate(4px, 4px);
+  }
+  .pop-shadow-lg {
+    box-shadow: 12px 12px 0px 0px rgba(17, 17, 17, 1);
+  }
+  
+  .pop-border {
+    border: 3px solid var(--foreground);
+  }
+}
