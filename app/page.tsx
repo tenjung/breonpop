@@ -14,22 +14,96 @@ export default function Home() {
     setIsLoaded(true);
   }, []);
 
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   if (!isLoaded) return null;
+
+  const menuItems = [
+    { label: "VIBE", id: "hero-video" },
+    { label: "RITUAL", id: "ritual" },
+    { label: "ART", id: "art" },
+    { label: "GALLERY", id: "gallery" },
+    { label: "FLAVOR", id: "shop" },
+    { label: "POP?", id: "cta" },
+  ];
 
   return (
     <main className="min-h-screen bg-background overflow-hidden selection:bg-primary selection:text-white pb-32">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 p-6 flex justify-between items-center bg-background border-b-[6px] border-foreground">
-        <div className="flex items-center">
-          <img src="/breon/breonpop-logo.png" alt="Breonpop Logo" className="h-8 md:h-12 object-contain animate-wiggle cursor-pointer" />
+      <nav className="fixed top-0 w-full z-50 p-4 md:p-6 flex justify-between items-center bg-background border-b-[6px] border-foreground">
+        <div className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          <img src="/breon/breonpop-logo.png" alt="Breonpop Logo" className="h-6 md:h-10 object-contain animate-wiggle cursor-pointer" />
         </div>
-        <Button variant="accent" size="sm">
+
+        {/* Pop-art Desktop Menu */}
+        <div className="hidden lg:flex items-center gap-4">
+          {menuItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollTo(item.id)}
+              className="text-foreground font-black text-sm md:text-lg uppercase px-4 py-2 border-[3px] border-transparent hover:border-foreground hover:bg-yellow-200 hover:pop-shadow transition-all duration-300 transform hover:-rotate-2"
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+
+        <Button variant="accent" size="sm" onClick={() => scrollTo("shop")} className="text-sm md:text-base animate-pulse">
           Shop Now
         </Button>
       </nav>
 
+      {/* Video Presentation Section - Full Blend Mode Interaction */}
+      <section id="hero-video" className="relative w-full h-[100vh] min-h-[800px] border-b-[6px] border-foreground overflow-hidden bg-black flex items-center justify-center">
+        {/* Background Full Video */}
+        <div className="absolute inset-0 w-full h-full">
+          <video
+            src="/breon/breonpop(20초 티저영상).mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls={false}
+            className="w-full h-full object-cover opacity-90 scale-105"
+          />
+        </div>
+
+        {/* Foreground Content with Mix-Blend Mode */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 h-full flex flex-col items-center justify-center pointer-events-none mix-blend-difference">
+          <motion.h3
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="text-[15vw] md:text-[180px] font-black uppercase text-white leading-[0.8] tracking-tighter text-center"
+          >
+            POP<br />YOUR<br />SMILE.
+          </motion.h3>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="mt-12 md:mt-24 pointer-events-auto"
+          >
+            <div className="flex flex-col items-center justify-center animate-spin-slow cursor-pointer">
+              <span className="text-white font-black text-4xl md:text-6xl uppercase leading-none mb-2 mix-blend-normal">BREON</span>
+              <span className="text-white font-black text-4xl md:text-6xl uppercase leading-none mix-blend-normal">POP</span>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Decorative Scroller Indicator */}
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex justify-center w-full z-20 pointer-events-none">
+          <div className="h-32 w-2 bg-gradient-to-b from-white/0 via-white to-white/0 pop-shadow-sm opacity-50"></div>
+        </div>
+      </section>
+
       {/* Hero Section - Asymmetrical & Bold */}
-      <section className="relative min-h-screen flex items-center justify-center pt-24 px-6 border-b-[6px] border-foreground">
+      <section id="ritual" className="relative min-h-screen flex items-center justify-center pt-24 px-6 border-b-[6px] border-foreground">
         {/* Background dotted pattern for pure pop-art feel */}
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 4px 4px, black 2px, transparent 0)', backgroundSize: '40px 40px' }}></div>
 
@@ -73,7 +147,7 @@ export default function Home() {
       </section>
 
       {/* Feature Section - Bold Colors & Cropped Art */}
-      <section className="relative py-32 bg-primary border-b-[6px] border-foreground overflow-hidden">
+      <section id="art" className="relative py-32 bg-primary border-b-[6px] border-foreground overflow-hidden">
         <motion.div
           style={{ y: yParallax }}
           className="absolute -top-20 -left-20 text-[15rem] md:text-[30rem] font-black text-foreground opacity-10 pointer-events-none leading-none tracking-tighter"
@@ -125,7 +199,7 @@ export default function Home() {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-32 px-6 bg-background border-b-[6px] border-foreground">
+      <section id="philosophy" className="py-32 px-6 bg-background border-b-[6px] border-foreground">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between gap-16">
           <motion.div
             style={{ y: yParallaxSlow }}
@@ -154,7 +228,7 @@ export default function Home() {
       </section>
 
       {/* Horizontal Swiping Banner (Marquee Gallery) */}
-      <section className="w-full overflow-hidden relative border-y-[6px] border-foreground bg-accent py-24 px-6 cursor-grab active:cursor-grabbing">
+      <section id="gallery" className="w-full overflow-hidden relative border-y-[6px] border-foreground bg-accent py-24 px-6 cursor-grab active:cursor-grabbing">
         <div className="max-w-7xl mx-auto mb-12 flex justify-between items-end">
           <h3 className="text-5xl md:text-7xl font-black text-background uppercase tracking-tighter pop-shadow-deep">THE GALLERY</h3>
           <span className="text-lg md:text-2xl font-black bg-background text-foreground border-[4px] border-foreground px-6 py-3 pop-shadow">
@@ -209,41 +283,9 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Video Presentation Section */}
-      <section className="py-32 px-6 bg-background border-b-[6px] border-foreground">
-        <div className="max-w-6xl mx-auto space-y-16">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
-            <h3 className="text-6xl md:text-8xl font-black uppercase text-foreground leading-[0.8] tracking-tighter mix-blend-exclusion">
-              EXPERIENCE<br /><span className="text-secondary bg-white inline-block px-2">THE</span> VIBE.
-            </h3>
-            <div className="w-24 h-24 rounded-full bg-primary flex items-center justify-center pop-border pop-shadow animate-pulse">
-              <span className="text-white font-black text-2xl uppercase">Play</span>
-            </div>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-            className="w-full aspect-video pop-border pop-shadow-deep bg-foreground p-2 md:p-6"
-          >
-            <div className="w-full h-full pop-border overflow-hidden bg-black">
-              <video
-                src="/breon/breonpop(20초 티저영상).mp4"
-                controls
-                autoPlay
-                muted
-                loop
-                className="w-full h-full object-cover scale-105"
-              />
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Products Section (Vending Machine Style) */}
-      <section className="py-24 bg-background border-b-[6px] border-foreground overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
+      <section id="shop" className="min-h-screen flex flex-col justify-center py-24 bg-background border-b-[6px] border-foreground overflow-hidden">
+        <div className="max-w-7xl w-full mx-auto px-6 mb-16 text-center">
           <motion.h3
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -405,7 +447,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-40 px-6 bg-warning text-foreground relative overflow-hidden border-b-[6px] border-foreground">
+      <section id="cta" className="min-h-screen flex items-center justify-center py-32 px-6 bg-warning text-foreground relative overflow-hidden border-b-[6px] border-foreground">
         {/* Huge repeating background text */}
         <div className="absolute inset-0 flex flex-col justify-center opacity-10 overflow-hidden pointer-events-none">
           <h2 className="text-[20vw] font-black uppercase leading-none break-all">POP POP POP POP POP</h2>
