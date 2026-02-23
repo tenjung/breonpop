@@ -127,7 +127,7 @@ export default function Home() {
               className="w-full rounded-3xl overflow-hidden pop-border pop-shadow-lg bg-background p-4 flex items-center justify-center transform rotate-1"
             >
               <img
-                src="/breon/260130 브레온팝 치약 상세페이지_세트O_GIF 2.gif"
+                src="/breon/detail-set-gif-2.gif"
                 alt="Breonpop Feature GIF"
                 className="w-full h-[500px] rounded-xl object-cover"
               />
@@ -137,7 +137,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 w-full max-w-6xl text-foreground text-left mt-16">
             {[
               { title: 'Joyful Image', text: '정화가 예술이 되는 순간. 지루한 일상 속 다채로운 향기를 느껴보세요.', img: '/breon/per.png' },
-              { title: 'Selected Art', text: '세계적인 패턴 디자인 브랜드 BBH의 선택이 담긴 시그니처 팝아트 패키지.', img: '/breon/가로 고화질 .png' },
+              { title: 'Selected Art', text: '세계적인 패턴 디자인 브랜드 BBH의 선택이 담긴 시그니처 팝아트 패키지.', img: '/breon/promo-wide.png' },
               { title: 'Daily Ritual', text: '단순한 양치를 넘어, 아침 저녁으로 마주하는 예술적인 정화의 시간을 선물합니다.', img: '/breon/111.png' }
             ].map((feature, i) => (
               <motion.div
@@ -215,12 +215,12 @@ export default function Home() {
               initial={{ x: 0 }}
             >
               {[
-                "/breon/psd/BBH Cheetahinredshades_JEWEL.jpg",
+                "/breon/psd/BBH_Cheetahinredshades_JEWEL.jpg",
                 "/breon/psd/BBH_CHEETAH_REUNION_JEWEL.jpg",
                 "/breon/psd/BBH_Chic_Citrus_JEWEL.jpg",
-                "/breon/psd/BBH_Citrus_Cheetah 2_JEWEL.jpg",
-                "/breon/psd/BBH_Colorful_Chic 2_JEWEL.jpg",
-                "/breon/psd/BBH_Flower kiss_JEWEL.jpg",
+                "/breon/psd/BBH_Citrus_Cheetah_2_JEWEL.jpg",
+                "/breon/psd/BBH_Colorful_Chic_2_JEWEL.jpg",
+                "/breon/psd/BBH_Flower_kiss_JEWEL.jpg",
                 "/breon/psd/BBH_Heart_Girl_Cheetah_JEWEL.jpg",
                 "/breon/psd/BBH_Lipstick_Venus_JEWEL.jpg",
                 "/breon/psd/BBH_Tropical_vision_JEWEL.jpg",
@@ -229,7 +229,7 @@ export default function Home() {
                 "/breon/psd/BBH_cocktailcitrus_JEWEL.jpg",
                 "/breon/psd/BBH_shellsquad_JEWEL.jpg",
                 "/breon/psd/BBH_tropicalglamcat_JEWEL.jpg",
-                "/breon/psd/BBH_wildflower creature_JEWEL.jpg",
+                "/breon/psd/BBH_wildflower_creature_JEWEL.jpg",
                 "/breon/psd/BBH_winkroar_JEWEL.jpg"
               ].map((src, idx) => (
                 <div
@@ -273,7 +273,7 @@ export default function Home() {
             className="w-full aspect-video rounded-3xl overflow-hidden pop-border pop-shadow-lg mx-auto bg-black flex items-center justify-center"
           >
             <video
-              src="/breon/breonpop(20초 티저영상).mp4"
+              src="/breon/breonpop-teaser-20s.mp4"
               controls
               autoPlay
               muted

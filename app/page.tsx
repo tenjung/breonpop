@@ -63,7 +63,7 @@ export default function Home() {
         {/* Background Full Video */}
         <div className="absolute inset-0 w-full h-full">
           <video
-            src="/breon/breonpop(20초 티저영상).mp4"
+            src="/breon/breonpop-teaser-20s.mp4"
             autoPlay
             muted
             loop
@@ -189,7 +189,7 @@ export default function Home() {
               className="w-full h-[600px] pop-border pop-shadow-deep bg-background flex items-center justify-center transform rotate-3 hover:translate-x-4 transition-transform duration-300 z-10"
             >
               <img
-                src="/breon/260130 브레온팝 치약 상세페이지_세트O_GIF 2.gif"
+                src="/breon/detail-set-gif-2.gif"
                 alt="Breonpop Feature GIF"
                 className="w-full h-full object-cover"
               />
@@ -222,7 +222,7 @@ export default function Home() {
           <div className="lg:w-1/2 w-full grid grid-cols-2 gap-6 relative">
             <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 4px 4px, black 2px, transparent 0)', backgroundSize: '20px 20px' }}></div>
             <img src="/breon/per.png" alt="Art 1" className="w-full aspect-square object-cover pop-border pop-shadow z-10 transform -rotate-3 hover:rotate-0 transition-all" />
-            <img src="/breon/가로 고화질 .png" alt="Art 2" className="w-full aspect-square object-cover pop-border pop-shadow z-10 transform translate-y-12 rotate-3 hover:rotate-0 transition-all" />
+            <img src="/breon/promo-wide.png" alt="Art 2" className="w-full aspect-square object-cover pop-border pop-shadow z-10 transform translate-y-12 rotate-3 hover:rotate-0 transition-all" />
           </div>
         </div>
       </section>
@@ -244,12 +244,12 @@ export default function Home() {
           initial={{ x: 0 }}
         >
           {[
-            "/breon/psd/BBH Cheetahinredshades_JEWEL.jpg",
+            "/breon/psd/BBH_Cheetahinredshades_JEWEL.jpg",
             "/breon/psd/BBH_CHEETAH_REUNION_JEWEL.jpg",
             "/breon/psd/BBH_Chic_Citrus_JEWEL.jpg",
-            "/breon/psd/BBH_Citrus_Cheetah 2_JEWEL.jpg",
-            "/breon/psd/BBH_Colorful_Chic 2_JEWEL.jpg",
-            "/breon/psd/BBH_Flower kiss_JEWEL.jpg",
+            "/breon/psd/BBH_Citrus_Cheetah_2_JEWEL.jpg",
+            "/breon/psd/BBH_Colorful_Chic_2_JEWEL.jpg",
+            "/breon/psd/BBH_Flower_kiss_JEWEL.jpg",
             "/breon/psd/BBH_Heart_Girl_Cheetah_JEWEL.jpg",
             "/breon/psd/BBH_Lipstick_Venus_JEWEL.jpg",
             "/breon/psd/BBH_Tropical_vision_JEWEL.jpg",
@@ -309,8 +309,8 @@ export default function Home() {
             </div>
 
             <div className="relative z-10 w-full aspect-[4/5] md:aspect-[3/4] max-h-[700px] flex items-end justify-center pop-border bg-foreground overflow-hidden rotate-2 group-hover:rotate-0 transition-all duration-500">
-              <img src="/breon/list3/스피아민트.jpg" alt="Spearmint Toothpaste" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
-              <img src="/breon/list3/스피아민트_호버.jpg" alt="Spearmint Hover Background" className="absolute inset-0 w-full h-full object-cover bg-[#B5E7D7] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <img src="/breon/list3/spearmint.jpg" alt="Spearmint Toothpaste" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+              <img src="/breon/list3/spearmint-hover.jpg" alt="Spearmint Hover Background" className="absolute inset-0 w-full h-full object-cover bg-[#B5E7D7] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               {/* HTML Text Content & Stats overlay sliding up */}
               <div className="relative z-20 w-[90%] bg-white pop-border pop-shadow-deep p-4 md:p-6 translate-y-[120%] group-hover:translate-y-[-20px] transition-transform duration-500 ease-in-out flex flex-col justify-between mb-4">
@@ -357,8 +357,8 @@ export default function Home() {
             </div>
 
             <div className="relative z-10 w-full aspect-[4/5] md:aspect-[3/4] max-h-[700px] flex items-end justify-center pop-border bg-foreground overflow-hidden -rotate-2 group-hover:rotate-0 transition-all duration-500">
-              <img src="/breon/list3/페퍼민트.jpg" alt="Peppermint Toothpaste" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
-              <img src="/breon/list3/페퍼민트_호버.jpg" alt="Peppermint Hover Background" className="absolute inset-0 w-full h-full object-cover bg-[#1F8FC9] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <img src="/breon/list3/peppermint.jpg" alt="Peppermint Toothpaste" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+              <img src="/breon/list3/peppermint-hover.jpg" alt="Peppermint Hover Background" className="absolute inset-0 w-full h-full object-cover bg-[#1F8FC9] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               {/* HTML Text Content & Stats overlay sliding up */}
               <div className="relative z-20 w-[90%] bg-white pop-border pop-shadow-deep p-4 md:p-6 translate-y-[120%] group-hover:translate-y-[-20px] transition-transform duration-500 ease-in-out flex flex-col justify-between mb-4">
@@ -406,7 +406,7 @@ export default function Home() {
 
             <div className="relative z-10 w-full aspect-[4/5] md:aspect-[3/4] max-h-[700px] flex items-end justify-center pop-border bg-foreground overflow-hidden rotate-1 group-hover:rotate-0 transition-all duration-500">
               <img src="/breon/list3/snowglass.jpg" alt="Icemint Toothpaste" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
-              <img src="/breon/list3/스노우글라스_호버.jpg" alt="Icemint Hover Background" className="absolute inset-0 w-full h-full object-cover bg-[#BAA7F5] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <img src="/breon/list3/snowglass-hover.jpg" alt="Icemint Hover Background" className="absolute inset-0 w-full h-full object-cover bg-[#BAA7F5] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               {/* HTML Text Content & Stats overlay sliding up */}
               <div className="relative z-20 w-[90%] bg-white pop-border pop-shadow-deep p-4 md:p-6 translate-y-[120%] group-hover:translate-y-[-20px] transition-transform duration-500 ease-in-out flex flex-col justify-between mb-4">
