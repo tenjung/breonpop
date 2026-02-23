@@ -176,7 +176,7 @@ export default function Home() {
               className="w-full h-[600px] pop-border pop-shadow-deep bg-background p-4 flex items-center justify-center transform hover:-rotate-2 transition-transform duration-300 z-20"
             >
               <img
-                src="/breon/list3/list3.png"
+                src="/breon/list3/list3-v2.png"
                 alt="Breonpop Details"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
               />
@@ -221,7 +221,7 @@ export default function Home() {
 
           <div className="lg:w-1/2 w-full grid grid-cols-2 gap-6 relative">
             <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 4px 4px, black 2px, transparent 0)', backgroundSize: '20px 20px' }}></div>
-            <img src="/breon/list3/papa.png" alt="Art 1" className="w-full aspect-square object-cover pop-border pop-shadow z-10 transform -rotate-3 hover:rotate-0 transition-all" />
+            <img src="/breon/list3/paper-v2.png" alt="Art 1" className="w-full aspect-square object-cover pop-border pop-shadow z-10 transform -rotate-3 hover:rotate-0 transition-all" />
             <img src="/breon/promo-wide.png" alt="Art 2" className="w-full aspect-square object-cover pop-border pop-shadow z-10 transform translate-y-12 rotate-3 hover:rotate-0 transition-all" />
           </div>
         </div>
